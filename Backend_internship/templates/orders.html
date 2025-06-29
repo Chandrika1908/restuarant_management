@@ -1,0 +1,11 @@
+<h2>Orders</h2>
+<form method="POST">
+    <input name="item" placeholder="Item name" required>
+    <input name="quantity" placeholder="Quantity" required type="number">
+    <button type="submit">Order</button>
+</form>
+<ul>
+    {% for order in orders %}
+        <li>{{ order.item_name }} x {{ order.quantity }}</li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,11 @@
+<h2>Menu</h2>
+<form method="POST" action="/add_item">
+    <input name="name" placeholder="Item name" required>
+    <input name="price" placeholder="Price" required type="number" step="0.01">
+    <button type="submit">Add Item</button>
+</form>
+<ul>
+    {% for item in items %}
+        <li>{{ item.name }} - ₹{{ item.price }}</li>
+    {% endfor %}
+</ul>
